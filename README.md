@@ -12,7 +12,7 @@ Error Handling - With ebb, you have the option of including 'catch' and 'finally
 
 Step Tracing - ebb bakes in step tracing and context inspection to help diagnose and debug complex flow logic.  Tracing can be selectively added to individual flows and enabled/disabled globally.
 
-## A Simple ebb flow
+## A simple ebb flow
 
 ```javascript
 var message = 'Ebb ';
@@ -46,7 +46,7 @@ ebb.flow(null, {
 
 ## What about async, step, etc?
 
-There are many other popular control flow packages worth considering - particularly for more advanced usage, and I often use those packages in conjunction with ebb.   Unlike those more complex solutions, ebb is designed specifically for sequenced execution and natural error handling.  You can accomplish both of those things using async, step, or otherwise, but doing them in ebb is just more fun ☺.   
+There are many other popular control flow packages worth considering - particularly for more advanced usage, and I often use those packages in conjunction with ebb.   Unlike those more complex solutions, ebb is designed specifically for sequenced execution and natural error handling.  You can accomplish both of those things using async, step, or otherwise, but doing them in ebb is just more fun!   
 
 
 ## Install
