@@ -89,6 +89,27 @@ class Flow {
         this._parent = parent;
     }
 
+
+    assert(value) {
+        var tests = {
+            isNull: function() {
+                if (! ((value === undefined) || (value === null)))
+                    throw( {assert: 'isNull', value: value});
+
+                return tests;
+            },
+            notNull: function() {
+                if (value === null)
+                    throw( {assert: "notNull", value: value});
+
+                return tests;
+            }
+        }
+
+        return tests;
+    }
+
+
     Step() {
         var step = this.steps.shift();  
               
@@ -141,7 +162,7 @@ class Flow {
             if (_globalOpts.debug)
                 this._dump('finally');
             
-            this.finally.call(this.context);
+            this.finally.call(this.context, this);
         }
 
         if (this._parent)
